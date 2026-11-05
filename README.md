@@ -16,3 +16,14 @@
 - 👤 [Explore the creator's projects](https://go.ondev.store/ruahhyaaa).
 - 🌍 [Create with OMGithub](https://go.ondev.store/).
 <!-- omgithub:readme:end -->
+
+## Ragdoll Riot
+
+A fast, arcade-style shooting gallery starring toy mannequins and splashes of paint. Open `index.html` in a browser (or serve this folder with a static web server) to play.
+
+- Click or tap the moving dolls to score; head and bullseye hits are worth extra.
+- Build a streak for bonus points.
+- Reload with **R** or the on-screen reload button.
+- Pause with **Esc** or the pause button. Runs last 60 seconds; your best score is saved locally.
+
+All splatter is stylized paint on fictional toy targets.
