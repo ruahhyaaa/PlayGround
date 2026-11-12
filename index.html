@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101114">
+  <title>RING//FURY — The Last Bell</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23d93848'/%3E%3Ctext x='7' y='24' fill='white' font-size='24' font-weight='bold'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Ring Fury home"><span class="brand-mark">R</span><span>RING<span class="slash">//</span>FURY</span></a>
+      <div class="event-label"><i></i> MAIN EVENT <span>·</span> LAS VEGAS, NV</div>
+      <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">♫ <span>SOUND ON</span></button>
+    </header>
+
+    <section class="fight-card" aria-label="Fight scoreboard">
+      <div class="fighter-info player-info">
+        <div class="fighter-name">MARCUS <b>“IRON”</b> REED</div>
+        <div class="fighter-meta"><span class="corner-tag blue">BLUE CORNER</span><span>RECORD 18—2</span></div>
+      </div>
+      <div class="round-panel"><span class="round-kicker">CHAMPIONSHIP BOUT</span><strong id="roundNumber">ROUND <em>01</em></strong><span class="round-clock" id="clock">01:30</span></div>
+      <div class="fighter-info opponent-info">
+        <div class="fighter-name">DIEGO <b>“EL TORO”</b> SANTOS</div>
+        <div class="fighter-meta"><span>RECORD 21—4</span><span class="corner-tag red">RED CORNER</span></div>
+      </div>
+    </section>
+
+    <section class="arena-frame">
+      <div class="broadcast-line"><span>LIVE</span><span>HEAVYWEIGHT · FEATURE BOUT</span><span id="statusLabel">WALKOUT</span></div>
+      <div class="canvas-wrap"><canvas id="arena" aria-label="Boxing ring game"></canvas>
+        <div class="fight-overlay" id="overlay">
+          <div class="overlay-card">
+            <div class="eyebrow"><span class="eyebrow-line"></span> THE LIGHTS ARE YOURS <span class="eyebrow-line"></span></div>
+            <h1>LAST<br><span> BELL.</span></h1>
+            <p>One ring. One shot at the title.<br>Make every punch count.</p>
+            <button class="start-button" id="startButton">ENTER THE RING <span>→</span></button>
+            <div class="overlay-note">A QUICK, ARCADE-STYLE BOXING MATCH</div>
+          </div>
+        </div>
+        <div class="result-overlay hidden" id="resultOverlay"><div class="result-card"><div class="eyebrow">FINAL BELL</div><h2 id="resultTitle">VICTORY</h2><p id="resultText"></p><button class="start-button" id="rematchButton">FIGHT AGAIN <span>↻</span></button></div></div>
+        <div class="hit-flash" id="hitFlash"></div>
+      </div>
+      <div class="health-row">
+        <div class="health-block blue-health"><div class="meter-label"><span>YOU <small>· BLUE CORNER</small></span><b id="playerHealthText">100%</b></div><div class="meter"><div class="meter-fill" id="playerHealth"></div></div><div class="stamina-meter"><span>STAMINA</span><div class="stamina-track"><i id="playerStamina"></i></div></div></div>
+        <div class="vs-divider">VS</div>
+        <div class="health-block red-health"><div class="meter-label"><b id="enemyHealthText">100%</b><span>RED CORNER · <small>EL TORO</small></span></div><div class="meter"><div class="meter-fill" id="enemyHealth"></div></div><div class="stamina-meter"><span>STAMINA</span><div class="stamina-track"><i id="enemyStamina"></i></div></div></div>
+      </div>
+    </section>
+
+    <footer class="bottom-bar">
+      <div class="tip"><span class="tip-icon">✦</span><span id="tipText">Stay light on your feet. Wait for an opening.</span></div>
+      <div class="control-legend"><span><kbd>A</kbd><kbd>D</kbd> MOVE</span><span><kbd>J</kbd> JAB</span><span><kbd>K</kbd> CROSS</span><span><kbd>L</kbd> GUARD</span></div>
+    </footer>
+    <div class="mobile-controls" aria-label="Touch controls">
+      <div class="move-pad"><button data-key="a" aria-label="Move left">←</button><button data-key="d" aria-label="Move right">→</button></div>
+      <div class="action-pad"><button data-key="l" class="guard-touch">GUARD</button><button data-key="j" class="jab-touch">JAB</button><button data-key="k" class="cross-touch">CROSS</button></div>
+    </div>
+    <div class="fine-print">ARCADE FIGHTING · STYLIZED ACTION <span>© RING//FURY ATHLETICS</span></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
